@@ -146,7 +146,7 @@ class up_downgame(game):
     def run(self):
         print('Start game range {} ~ {}'.format(self.ll,self.ul))
         if self.pr_no == None:
-            self.makern()
+            self.__makern()
         while True:
             attack = int(input('수를 입력하시오'))
             if attack == self.pr_no:
@@ -156,7 +156,7 @@ class up_downgame(game):
                 print('너무 작다')
             else:
                 print('너무 크다')
-    def makern(self):
+    def __makern(self):
         self.pr_no = random.randint(self.ll,self.ul)
 
 mygame = up_downgame('Mygame',10,100)
